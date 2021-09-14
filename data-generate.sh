@@ -4,10 +4,10 @@ set -e
 #---------------------------------------
 
 src=en
-tgt=vi
+tgt=fr
 
-DATA_PATH=data/${src}-${tgt}-50k/
-MODEL_PATH=train/${src}-${tgt}-50k/dropout-postlayer0-lr0.001
+DATA_PATH=data/${src}-${tgt}/
+MODEL_PATH=train/${src}-${tgt}
 #export CUDA_VISIBLE_DEVICES=0
 
 python3 scripts/average_checkpoints.py \
