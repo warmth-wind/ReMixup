@@ -4,15 +4,12 @@ set -e
 #---------------------------------------
 
 src=en
-tgt=vi
+tgt=fr
 
-DATA_PATH=data/${src}-${tgt}-50k/
-MODEL_PATH=train/${src}-${tgt}-50k/dropout-postlayer0-lr0.001-test
+DATA_PATH=data/${src}-${tgt}/
+MODEL_PATH=train/${src}-${tgt}/
 mkdir -p $MODEL_PATH
 nvidia-smi
-
-#python -c "import torch; print(torch.__version__)"
-#export CUDA_VISIBLE_DEVICES=0
 
 python3 train.py $DATA_PATH \
     --user-dir examples/translation_rdrop/translation_rdrop_src/ \
