@@ -7,7 +7,7 @@ src=en
 tgt=fr
 
 DATA_PATH=data/${src}-${tgt}/
-MODEL_PATH=train/${src}-${tgt}/
+MODEL_PATH=train/${src}-${tgt}
 mkdir -p $MODEL_PATH
 nvidia-smi
 
